@@ -13,7 +13,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
-echo "==> 3. 安装 chezmoi 并恢复配置(会用你管理的 .zshrc 覆盖默认生成的)"
+echo "==> 3. 安装 chezmoi 并恢复配置"
 brew install chezmoi
 chezmoi init --apply https://github.com/gamepunk/bootstrap.git
 
@@ -28,5 +28,10 @@ mise install
 
 echo "==> 7. 登录 GitHub CLI"
 gh auth login
+
+echo "==> 8. 修复 xbar 插件执行权限"
+if [ -d "$HOME/Library/Application Support/xbar/plugins" ]; then
+  chmod +x "$HOME/Library/Application Support/xbar/plugins"/*
+fi
 
 echo "==> 全部完成!"
