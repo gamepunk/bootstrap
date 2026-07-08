@@ -19,6 +19,8 @@ cask "bitwarden"
 cask "chatgpt"
 # OpenAI's Codex desktop app for managing coding agents
 cask "codex-app"
+# Menu bar usage monitor for Codex and Claude
+cask "codexbar"
 # Privacy-first clipboard manager
 cask "yuzeguitarist/deck/deckclip"
 cask "font-blex-mono-nerd-font"
