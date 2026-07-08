@@ -1,0 +1,11 @@
+[settings.ruby]
+compile = false
+github_attestations = false
+
+[settings.python]
+compile = false
+
+[tools]
+bun = "latest"
+python = "latest"
+ruby = "latest"
