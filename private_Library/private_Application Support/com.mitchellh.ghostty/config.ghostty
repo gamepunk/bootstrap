@@ -1,0 +1,33 @@
+# 字体
+font-family = BlexMono Nerd Font Mono
+font-size = 14
+font-thicken = true
+
+# 窗口
+window-padding-x = 12
+window-padding-y = 12
+window-decoration = true
+
+# 背景透明
+background-opacity = 0.90
+background-blur-radius = 10
+
+# 光标
+cursor-style = block
+cursor-style-blink = true
+
+# 滚动
+scrollback-limit = 10000
+
+# Shell
+shell-integration = detect
+
+# 复制粘贴
+copy-on-select = true
+
+# 快捷键
+keybind = cmd+shift+c=copy_to_clipboard
+keybind = cmd+shift+v=paste_from_clipboard
+
+# 默认主题
+theme = Catppuccin Mocha
