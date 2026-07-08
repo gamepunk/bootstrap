@@ -1,29 +1,32 @@
 #!/bin/bash
-set -e  # 任何一步出错就停止,避免后面步骤在错误状态下继续执行
+set -e
 
 echo "==> 1. 安装 Homebrew"
 if ! command -v brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  echo "Homebrew 已安装,跳过"
 fi
 
-echo "==> 2. 安装 chezmoi 并恢复配置"
+echo "==> 2. 安装 oh-my-zsh"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+echo "==> 3. 安装 chezmoi 并恢复配置(会用你管理的 .zshrc 覆盖默认生成的)"
 brew install chezmoi
 chezmoi init --apply https://github.com/gamepunk/bootstrap.git
 
-echo "==> 3. 安装所有软件"
+echo "==> 4. 安装所有软件"
 brew bundle install --file=~/.config/brew/Brewfile
 
-echo "==> 4. 重新加载 shell 配置"
+echo "==> 5. 重新加载 shell 配置"
 source ~/.zshrc
 
-echo "==> 5. 安装语言运行时"
+echo "==> 6. 安装语言运行时"
 mise install
 
-echo "==> 6. 登录 GitHub CLI"
+echo "==> 7. 登录 GitHub CLI"
 gh auth login
 
 echo "==> 全部完成!"
