@@ -103,4 +103,4 @@ fi
 alias zshrc="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 export PATH="/Users/billow/.local/bin:$PATH"  # Added by Deck.app
-export HOMEBREW_BUNDLE_FILE=~/.config/brewfile/Brewfile
+export HOMEBREW_BUNDLE_FILE=~/.config/brew/Brewfile
