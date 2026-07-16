@@ -108,9 +108,9 @@ export PATH="$HOME/.local/bin:$PATH"  # Added by Deck.app
 export PATH="$HOME/.bun/bin:$PATH"
 export HOMEBREW_BUNDLE_FILE=~/.config/brew/Brewfile
 
-# DeepSeek API for Claude Code
+# DeepSeek API for Claude Code (key stored in macOS Keychain)
 export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
-export ANTHROPIC_AUTH_TOKEN=your-api-key-here
+export ANTHROPIC_AUTH_TOKEN=$(security find-generic-password -w -s "deepseek-api-key" 2>/dev/null)
 export ANTHROPIC_MODEL=deepseek-v4-pro[1m]
 export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro[1m]
 export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro[1m]
