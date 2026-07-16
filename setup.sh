@@ -22,7 +22,11 @@ brew install chezmoi
 chezmoi init --apply https://github.com/gamepunk/bootstrap.git
 
 echo "==> 4. 安装所有软件（brew / cask / App Store / VS Code 插件）"
-brew bundle install --file=~/.config/brew/Brewfile
+echo "    检查 Brewfile 中尚未安装的软件..."
+brew bundle check --file=~/.config/brew/Brewfile --verbose || true
+echo ""
+echo "    开始安装（以下为实时进度）..."
+brew bundle install --file=~/.config/brew/Brewfile --verbose
 
 echo "==> 5. 重新加载 shell 配置"
 source ~/.zshrc
