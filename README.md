@@ -12,7 +12,8 @@
 | `~/.config/mise/config.toml` | 语言运行时版本管理 |
 | `~/.config/zed/settings.json` | Zed 编辑器设置 |
 | `~/.config/starship.toml` | 终端提示符配置 |
-| `~/.config/gh/config.yml` | GitHub CLI 配置（不含 token） |
+| `~/.config/gh/config.yml` | GitHub CLI 公共配置 |
+| `~/.config/gh/hosts.yml` | GitHub CLI 认证信息（私有权限） |
 | `~/.config/brew/Brewfile` | 所有 brew / cask / App Store / VS Code 插件清单 |
 | `~/.config/ghostty/config.ghostty` | Ghostty 终端配置 |
 | `~/.config/netnewswire/Subscriptions-OnMyMac.opml` | RSS 订阅列表 |
@@ -21,7 +22,8 @@
 | `~/Library/Application Scripts/com.apple.mail/mail-motherfucker.scpt` | 邮件自动化脚本 |
 | `~/Library/Sounds/Motherfucker.caf` | 自定义提示音 |
 
-**说明**：VS Code 的设置/插件/快捷键交给官方 **Settings Sync** 管理，不在本仓库中。
+**说明**：VS Code 的设置/快捷键交给官方 **Settings Sync** 管理，不在本仓库中。插件通过 Brewfile 中的 `vscode` 指令安装。
+通过 `.chezmoiignore` 排除仓库自身的 `README.md` 和 `setup.sh`，避免被部署到 `~/`。
 
 ## 新电脑配置
 
@@ -39,7 +41,7 @@ bash ~/.local/share/chezmoi/setup.sh
 1. 安装 Homebrew（如未安装）
 2. 安装 oh-my-zsh（如未安装）
 3. 安装 chezmoi 并恢复所有配置文件
-4. 通过 Brewfile 安装所有软件（brew / cask / App Store / VS Code 插件）
+4. 通过 Brewfile 安装所有软件（先检查缺失项，再逐项安装并显示进度）
 5. 重新加载 shell 配置
 6. 通过 mise 安装语言运行时
 7. 登录 GitHub CLI
@@ -94,6 +96,19 @@ git push
 ```bash
 brew bundle check --file=~/.config/brew/Brewfile --verbose
 ```
+
+setup.sh 在执行安装前也会自动运行此检查，让用户了解将要安装的内容。
+
+### 排除不需要部署到 ~/ 的文件
+
+在 `~/.local/share/chezmoi/.chezmoiignore` 中每行写一个文件名，支持 glob 模式：
+
+```
+README.md
+setup.sh
+```
+
+这些文件属于 chezmoi 仓库自身（文档/脚本），不应部署到用户主目录。
 
 ### 更新 RSS 订阅列表
 
