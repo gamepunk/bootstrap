@@ -1,6 +1,8 @@
 tap "yuzeguitarist/deck", trusted: true
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # YAML Parser
@@ -49,6 +51,8 @@ cask "microsoft-word"
 cask "netnewswire"
 # AI coding agent desktop client
 cask "opencode-desktop"
+# Pap.er, 4K 5K HD Wallpaper Application
+cask "paper"
 # Instant messaging tool
 cask "qq"
 # HTTP client that helps testing and describing APIs
@@ -65,6 +69,8 @@ cask "snapzy"
 cask "subler"
 # Text editor for code, markup and prose
 cask "sublime-text"
+# App to switch hosts
+cask "switchhosts"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Messaging app with a focus on speed and security
@@ -90,7 +96,9 @@ mas "Plash", id: 1494023538
 mas "Theine", id: 955848755
 mas "汽水音乐", id: 1605585211
 mas "百度网盘", id: 547166701
+mas "老虎国际Pro", id: 6450114063
 vscode "anthropic.claude-code"
+vscode "astro-build.astro-vscode"
 vscode "esbenp.prettier-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "ms-ceintl.vscode-language-pack-zh-hans"
@@ -102,4 +110,5 @@ vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode.sublime-keybindings"
 vscode "ritwickdey.liveserver"
 vscode "shopify.ruby-lsp"
+vscode "unifiedjs.vscode-mdx"
 vscode "vizards.deepseek-v4-for-copilot"
