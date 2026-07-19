@@ -27,6 +27,8 @@ cask "codexbar"
 cask "yuzeguitarist/deck/deckclip"
 cask "font-blex-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-source-han-sans-vf"
+cask "font-source-han-serif-vf"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser

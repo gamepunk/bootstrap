@@ -52,9 +52,9 @@ function czu() {
 
     echo ""
     git add -A
-    git commit -m "$msg
-
-  Co-Authored-By: Claude <noreply@anthropic.com>" 2>&1 || {
+    git commit \
+      -m "$msg" \
+      -m "Co-Authored-By: Claude <noreply@anthropic.com>" 2>&1 || {
       echo "✕  Commit failed" >&2
       exit 1
     }
