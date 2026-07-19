@@ -57,3 +57,4 @@ alias cdz="cd ~/.local/share/chezmoi"
 
 # ── Homebrew ─────────────────────────────────────────
 export HOMEBREW_BUNDLE_FILE=~/.config/brew/Brewfile
+export PATH="/Users/billow/.local/bin:$PATH"  # Added by Deck.app

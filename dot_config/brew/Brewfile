@@ -19,8 +19,8 @@ cask "betterdisplay"
 cask "bitwarden"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Anthropic's official Claude AI desktop app
-cask "claude"
+# Continuation of Clash Verge - A Clash Meta GUI based on Tauri
+cask "clash-verge-rev"
 # Menu bar usage monitor for Codex and Claude
 cask "codexbar"
 # Privacy-first clipboard manager
@@ -39,8 +39,6 @@ cask "input-source-pro"
 cask "keka"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
-# Window manager
-cask "loop"
 # Spreadsheet software
 cask "microsoft-excel"
 # Presentation software
@@ -69,18 +67,12 @@ cask "snapzy"
 cask "subler"
 # Text editor for code, markup and prose
 cask "sublime-text"
-# App to switch hosts
-cask "switchhosts"
-# Mesh VPN based on WireGuard
-cask "tailscale-app"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Cleanup and system status tool
 cask "tencent-lemon"
 # VPN and WiFi proxy
 cask "thunder"
-# Charting and social-networking for investment traders
-cask "tradingview"
 # Configurable document editor that supports Markdown
 cask "typora"
 # Open-source code editor
@@ -91,8 +83,8 @@ cask "wechat"
 cask "xbar"
 # Multiplayer code editor
 cask "zed"
+mas "ColorSlurp", id: 1287239339
 mas "Magnet", id: 441258766
-mas "Plash", id: 1494023538
 mas "Theine", id: 955848755
 mas "汽水音乐", id: 1605585211
 mas "百度网盘", id: 547166701
