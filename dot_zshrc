@@ -54,7 +54,6 @@ path=(
 # ── Aliases ──────────────────────────────────────────
 alias zshrc="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
-alias cdz="cd ~/.local/share/chezmoi"
 
 # ── Homebrew ─────────────────────────────────────────
 export HOMEBREW_BUNDLE_FILE=~/.config/brew/Brewfile
