@@ -10,6 +10,7 @@ ZSH_DISABLE_COMPFIX="true"
 # Plugins (standard in $ZSH/plugins/, custom in $ZSH_CUSTOM/plugins/)
 plugins=(
   git
+  chezmoi
   z
   extract
   web-search
