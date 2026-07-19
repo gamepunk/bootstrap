@@ -55,44 +55,43 @@ function czu() {
   fi
   echo "✓  Files re-added"
 
-  # Step 3: Check for changes in source repo
-  cd "$_CHEZMOI_SOURCE" || return 1
+  # Step 3: Commit and push (in subshell to avoid cd side-effect)
+  (
+    cd "$_CHEZMOI_SOURCE" || exit 1
 
-  if git diff --quiet && git diff --cached --quiet; then
-    echo "✓  No changes to commit"
-    return 0
-  fi
+    if git diff --quiet && git diff --cached --quiet; then
+      echo "✓  No changes to commit"
+      exit 0
+    fi
 
-  # Show what changed
-  echo ""
-  echo "── Changes ──────────────────────────────"
-  git diff --stat --cached 2>/dev/null
-  git diff --stat 2>/dev/null
-  echo "──────────────────────────────────────────"
+    echo ""
+    echo "── Changes ──────────────────────────────"
+    git diff --stat --cached 2>/dev/null
+    git diff --stat 2>/dev/null
+    echo "──────────────────────────────────────────"
 
-  if $dry_run; then
-    echo "🔍  Dry-run: skipping commit & push"
-    return 0
-  fi
+    if $dry_run; then
+      echo "🔍  Dry-run: skipping commit & push"
+      exit 0
+    fi
 
-  # Step 4: Commit and push
-  echo ""
-  git add -A
-  if git commit -m "$msg
+    echo ""
+    git add -A
+    git commit -m "$msg
 
-  Co-Authored-By: Claude <noreply@anthropic.com>" 2>&1; then
+  Co-Authored-By: Claude <noreply@anthropic.com>" 2>&1 || {
+      echo "✕  Commit failed" >&2
+      exit 1
+    }
+
+    git push 2>&1 || {
+      echo "✕  Push failed" >&2
+      exit 1
+    }
+
     echo "✓  Committed: $msg"
-  else
-    echo "✕  Commit failed" >&2
-    return 1
-  fi
-
-  if git push 2>&1; then
     echo "✓  Pushed to remote"
-  else
-    echo "✕  Push failed" >&2
-    return 1
-  fi
+  ) || return 1
 
   echo ""
   echo "✅  Dotfiles updated successfully"
