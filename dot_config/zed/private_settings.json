@@ -7,6 +7,49 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": true,
+    "anthropic_retention": false
+  },
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "model": "",
+      "api_url": "",
+      "prompt_format": "deepseek_coder"
+    }
+  },
+  "agent": {
+    "notify_when_agent_waiting": "never",
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
+    "sandbox_permissions": {
+      "allow_fs_write_all": true,
+      "allow_all_hosts": true,
+      "network_hosts": [
+        "docs.astro.build",
+        "www.theverge.com",
+        "www.markdownguide.org",
+        "bookfere.com",
+        "inksky.pages.dev"
+      ]
+    },
+    "play_sound_when_agent_done": "always",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "buffer_font_family": "BlexMono Nerd Font Mono",
   "icon_theme": "Zed (Default)",
   "agent_servers": {
@@ -26,9 +69,5 @@
   "buffer_line_height": {
     "custom": 1.4
   },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  }
+  "theme": "Ayu Light"
 }

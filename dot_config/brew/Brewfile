@@ -5,6 +5,8 @@ brew "chezmoi"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
 # YAML Parser
 brew "libyaml"
 # Mac App Store command-line interface
@@ -13,10 +15,14 @@ brew "mas"
 brew "mise"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Compress/expand executable files
+brew "upx"
 # Display management tool
 cask "betterdisplay"
 # Desktop password and login vault
 cask "bitwarden"
+# E-books management software
+cask "calibre"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Continuation of Clash Verge - A Clash Meta GUI based on Tauri
@@ -85,24 +91,21 @@ cask "wechat"
 cask "xbar"
 # Multiplayer code editor
 cask "zed"
+mas "BaiduNetdisk", id: 547166701
 mas "ColorSlurp", id: 1287239339
 mas "Magnet", id: 441258766
 mas "Theine", id: 955848755
 mas "汽水音乐", id: 1605585211
-mas "百度网盘", id: 547166701
 mas "老虎国际Pro", id: 6450114063
 vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
 vscode "esbenp.prettier-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "ms-ceintl.vscode-language-pack-zh-hans"
-vscode "ms-python.black-formatter"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode.sublime-keybindings"
+vscode "oven.bun-vscode"
 vscode "ritwickdey.liveserver"
-vscode "shopify.ruby-lsp"
 vscode "unifiedjs.vscode-mdx"
 vscode "vizards.deepseek-v4-for-copilot"
+go "cmd/go"
+go "cmd/gofmt"
