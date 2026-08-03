@@ -24,6 +24,7 @@ plugins=(
   anthropic
   zsh-autosuggestions
   zsh-syntax-highlighting
+  ffmpeg
 )
 
 source $ZSH/oh-my-zsh.sh
