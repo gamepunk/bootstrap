@@ -7,6 +7,8 @@ brew "ffmpeg"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
 # YAML Parser
 brew "libyaml"
 # Mac App Store command-line interface
@@ -15,22 +17,28 @@ brew "mas"
 brew "mise"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Compress/expand executable files
+brew "upx"
 # Display management tool
 cask "betterdisplay"
 # Desktop password and login vault
 cask "bitwarden"
+# E-books management software
+cask "calibre"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Anthropic's official Claude AI desktop app
-cask "claude"
+# Continuation of Clash Verge - A Clash Meta GUI based on Tauri
+cask "clash-verge-rev"
 # Menu bar usage monitor for Codex and Claude
 cask "codexbar"
 # Privacy-first clipboard manager
-cask "yuzeguitarist/deck/deckclip", trusted: true
+cask "yuzeguitarist/deck/deckclip"
 # Downloads videos from different websites
 cask "downie"
 cask "font-blex-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-source-han-sans-vf"
+cask "font-source-han-serif-vf"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -43,8 +51,6 @@ cask "input-source-pro"
 cask "keka"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
-# Window manager
-cask "loop"
 # Spreadsheet software
 cask "microsoft-excel"
 # Presentation software
@@ -55,6 +61,8 @@ cask "microsoft-word"
 cask "netnewswire"
 # AI coding agent desktop client
 cask "opencode-desktop"
+# Pap.er, 4K 5K HD Wallpaper Application
+cask "paper"
 # Instant messaging tool
 cask "qq"
 # HTTP client that helps testing and describing APIs
@@ -71,14 +79,14 @@ cask "snapzy"
 cask "subler"
 # Text editor for code, markup and prose
 cask "sublime-text"
+# Native database client for many database types
+cask "tablepro"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Cleanup and system status tool
 cask "tencent-lemon"
 # VPN and WiFi proxy
 cask "thunder"
-# Configurable document editor that supports Markdown
-cask "typora"
 # Open-source code editor
 cask "visual-studio-code"
 # Free messaging and calling application
@@ -87,20 +95,23 @@ cask "wechat"
 cask "xbar"
 # Multiplayer code editor
 cask "zed"
+mas "ColorSlurp", id: 1287239339
+mas "Gifski", id: 1351639930
 mas "Magnet", id: 441258766
+mas "MindNode", id: 6446116532
 mas "Theine", id: 955848755
+mas "汽水音乐", id: 1605585211
+mas "百度网盘", id: 547166701
+mas "老虎国际Pro", id: 6450114063
 vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
 vscode "esbenp.prettier-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "ms-ceintl.vscode-language-pack-zh-hans"
-vscode "ms-python.black-formatter"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode.sublime-keybindings"
+vscode "oven.bun-vscode"
 vscode "ritwickdey.liveserver"
-vscode "shopify.ruby-lsp"
 vscode "unifiedjs.vscode-mdx"
 vscode "vizards.deepseek-v4-for-copilot"
+go "cmd/go"
+go "cmd/gofmt"
