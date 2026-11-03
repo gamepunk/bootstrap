@@ -65,8 +65,6 @@ cask "ghostty"
 cask "google-chrome"
 # Homebrew's official GUI
 cask "homebrew-app"
-# Trading software
-cask "ibkr"
 # Free and open-source media player
 cask "iina"
 # File archiver
