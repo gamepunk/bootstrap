@@ -1,52 +1,74 @@
-tap "yuzeguitarist/deck", trusted: true
+tap "gamepunk/tap", trusted: true
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Shell script to build fancy DMGs
+brew "create-dmg"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# macOS CLI for managing custom icons for files and folders
+brew "fileicon"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
-# YAML Parser
-brew "libyaml"
+# CLI tool for searching and downloading app packages from the iOS App Store
+brew "ipatool"
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Tool to enforce Swift style and conventions
+brew "swiftlint"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Compress/expand executable files
 brew "upx"
+# Internet file retriever
+brew "wget"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
+# Android SDK component
+cask "android-platform-tools"
 # Display management tool
 cask "betterdisplay"
 # Desktop password and login vault
 cask "bitwarden"
-# E-books management software
-cask "calibre"
+# Screen recording software
+cask "cap"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Continuation of Clash Verge - A Clash Meta GUI based on Tauri
 cask "clash-verge-rev"
 # Menu bar usage monitor for Codex and Claude
 cask "codexbar"
-# Privacy-first clipboard manager
-cask "yuzeguitarist/deck/deckclip"
+# Plugin-based AI agent desktop application
+cask "deepseek-harness"
 # Downloads videos from different websites
 cask "downie"
 cask "font-blex-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-source-han-sans-vf"
 cask "font-source-han-serif-vf"
+# 把任意应用窗口或屏幕区域实时镜像到悬浮窗
+cask "gamepunk/tap/magic-mirror", trusted: true
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Homebrew's official GUI
+cask "homebrew-app"
+# Trading software
+cask "ibkr"
 # Free and open-source media player
 cask "iina"
-# Tool for multi-language users
-cask "input-source-pro"
 # File archiver
 cask "keka"
 # Open-source cross-platform alternative to AirDrop
@@ -57,30 +79,18 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
-# Free and open-source RSS reader
-cask "netnewswire"
 # AI coding agent desktop client
 cask "opencode-desktop"
 # Pap.er, 4K 5K HD Wallpaper Application
 cask "paper"
-# Instant messaging tool
-cask "qq"
-# HTTP client that helps testing and describing APIs
-cask "rapidapi"
-# Control your tools with a few keystrokes
-cask "raycast"
 # EPUB ebook editor
 cask "sigil"
-# PDF reader and note-taking application
-cask "skim"
 # Native screenshots, recording, annotation, and editing from the menu bar
 cask "snapzy"
 # Mux and tag mp4 files
 cask "subler"
 # Text editor for code, markup and prose
 cask "sublime-text"
-# Native database client for many database types
-cask "tablepro"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Cleanup and system status tool
@@ -93,28 +103,29 @@ cask "typora"
 cask "visual-studio-code"
 # Free messaging and calling application
 cask "wechat"
-# View output from scripts in the menu bar
-cask "xbar"
+# AI agent for everyday office work
+cask "workbuddy-cn"
 # Multiplayer code editor
 cask "zed"
 mas "ColorSlurp", id: 1287239339
-mas "Gifski", id: 1351639930
-mas "Keynote讲演", id: 361285480
 mas "Magnet", id: 441258766
-mas "MindNode", id: 6446116532
+mas "OneKey", id: 1609559473
+mas "PDFgear", id: 6469021132
+mas "ScreenToLayers", id: 1077317077
 mas "Theine", id: 955848755
+mas "Xcode", id: 497799835
 mas "汽水音乐", id: 1605585211
 mas "百度网盘", id: 547166701
+mas "网易爆米花", id: 6553989480
 mas "老虎国际Pro", id: 6450114063
 vscode "anthropic.claude-code"
-vscode "astro-build.astro-vscode"
 vscode "esbenp.prettier-vscode"
+vscode "llvm-vs-code-extensions.lldb-dap"
 vscode "mechatroner.rainbow-csv"
 vscode "ms-ceintl.vscode-language-pack-zh-hans"
 vscode "ms-vscode.sublime-keybindings"
 vscode "oven.bun-vscode"
 vscode "ritwickdey.liveserver"
+vscode "swiftlang.swift-vscode"
 vscode "unifiedjs.vscode-mdx"
 vscode "vizards.deepseek-v4-for-copilot"
-go "cmd/go"
-go "cmd/gofmt"

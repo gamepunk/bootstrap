@@ -30,6 +30,7 @@
       }
     },
     "sandbox_permissions": {
+      "allow_unsandboxed": true,
       "allow_fs_write_all": true,
       "allow_all_hosts": true,
       "network_hosts": [
@@ -42,10 +43,10 @@
     },
     "play_sound_when_agent_done": "always",
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "zed.dev",
+      "model": "gpt-6.1-sol",
       "enable_thinking": true,
-      "effort": "high"
+      "effort": "medium"
     },
     "favorite_models": [],
     "model_parameters": []
@@ -69,5 +70,9 @@
   "buffer_line_height": {
     "custom": 1.4
   },
-  "theme": "Ayu Light"
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Dark",
+    "dark": "Ayu Dark"
+  }
 }

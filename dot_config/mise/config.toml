@@ -6,7 +6,9 @@ github_attestations = false
 compile = false
 
 [tools]
-bun = "latest"
-go = "latest"
-python = "latest"
-ruby = "latest"
+bun = "1.4.0"
+go = "1.26.5"
+node = "latest"
+python = "3.14.6"
+ruby = "4.0.6"
+rust = "latest"
